@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="pinterest" content="nopin" />
+    <meta name="pinterest" content="nohover" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="keywords" content="" />
+    <title>Além do Sandbox</title>
+    <meta property="og:title" content="Além do Sandbox" />
+    <meta name="generator" content="observable" />
+    <meta
+      name="description"
+      content="Mapeamento de artefatos para observação de marcadores de Experiência"
+    />
+    <meta
+      property="og:description"
+      content="Mapeamento de artefatos para observação de marcadores de Experiência"
+    />
+    <meta name="author" content="Guilherme Ranoya" />
+    <meta property="og:url" content="https://alemdosandbox.vercel.app" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:site_name" content="Além do Sandbox" />
+    <meta name="application-name" content="Além do Sandbox" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image" content="coverimage600.jpg" />
+    <meta property="og:image:secure_url" content="coverimage600.jpg" />
+    <link rel="image_src" type="image/jpg" href="coverimage600.jpg" />
+    <link rel="icon" type="image/png" href="coverimage16.png" />
+    <link rel="shortcut icon" href="coverimage57.png" />
+    <link rel="apple-touch-icon" href="coverimage57.png" />
+    <link rel="apple-touch-icon" href="coverimage72.png" sizes="72x72" />
+    <link rel="apple-touch-icon" href="coverimage114.png" sizes="114x114" />
+    <link rel="apple-touch-icon" href="coverimage144.png" sizes="144x144" />
+    <meta name="msapplication-square70x70logo" content="coverimage70.png" />
+    <meta name="msapplication-square150x150logo" content="coverimage150.png" />
+    <meta
+      name="msapplication-wide310x150logo"
+      content="coverimage310x150.png"
+    />
+    <meta name="msapplication-square310x310logo" content="coverimage310.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="msapplication-navbutton-color" content="#ffffff" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+      html,
+      body {
+        margin: 60px 40px 100px 40px;
+        background-color: white;
+      }
+
+      * {
+        font-family: "Roboto", sans-serif;
+      }
+
+      h1 {
+        font-size: 28px;
+        line-height: 32px;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 18px;
+      }
+
+      a {
+        color: #85b7d9;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #427fa8;
+        text-decoration: underline;
+      }
+
+      .custombutton {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 26px;
+        height: 26px;
+        border: 3px solid white;
+        padding-left: 11px;
+        padding-right: 11px;
+        background-color: grey;
+        cursor: pointer;
+        margin-right: 6px;
+        margin-bottom: 3px;
+        color: white;
+        border-radius: 3px;
+      }
+
+      .custombutton:hover {
+        background-color: black;
+        border: 3px solid black;
+      }
+
+      .blocoposts {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 15px 15px;
+        width: 100%;
+      }
+
+      .blocointeiro {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .blocointeiro:hover .imagem,
+      .blocointeiro:hover .flexembed {
+        border: 15px solid #0033aa77;
+        transition: all 0.3s ease-in;
+      }
+
+      .menosborda {
+        margin-bottom: 0;
+      }
+
+      .imagem {
+        width: calc(100% - 30px);
+        padding-top: calc(100% - 30px);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        border: 15px solid transparent;
+        transition: all 0.3s ease-in;
+      }
+
+      .flexembed {
+        display: flex;
+        width: calc(100% - 30px);
+        height: calc(70% - 15px);
+        align-items: center;
+        border: 15px solid transparent;
+        transition: all 0.3s ease-in;
+      }
+
+      .vimeoembed {
+        width: 100%;
+      }
+
+      .singlepost {
+        width: 100%;
+
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 16px !important;
+        line-height: 19px !important;
+        display: inline-block;
+      }
+
+      .singlepost: hover {
+
+      }
+
+      .autoria {
+        font-size: 12px;
+        line-height: 13px;
+      }
+
+      .listagrid {
+        display: grid;
+        grid-template-columns: [inicio] 1fr 18px 18px 18px 18px 18px 18px 18px 18px 18px 18px 18px 18px 18px 18px 18px 18px 18px 18px 18px 18px 18px 18px 18px 18px 18px 18px 18px 18px 18px 18px [fim];
+        font-size: 14px;
+        line-height: 18px;
+        gap: 3px 1px;
+      }
+
+      .linhadivisoria {
+        height: 1px;
+        grid-column: inicio / fim;
+        background-color: #dddddd;
+      }
+
+      .X {
+        background-color: #aaaaaa;
+      }
+
+      .head {
+        height: 200px;
+        font-size: 12px;
+        line-height: 12px;
+        color: #999999;
+      }
+
+      .headvert {
+        width: 200px;
+        transform: matrix(-0, -1, 1, -0, 5, -5);
+      }
+
+      .headhor {
+        margin-top: 180px;
+        margin-bottom: -180px;
+      }
+
+      #observablehq-resultadolinsta-8a850daf {
+        display: none;
+      }
+
+    </style>
+
+    <script>
+
+      let listagem = function() {
+        document.getElementById("observablehq-curadoria-8a850daf").style.display = "none";
+        document.getElementById("observablehq-resultadolinsta-8a850daf").style.display = "block";
+      }
+
+      let thumbs = function() {
+        document.getElementById("observablehq-resultadolinsta-8a850daf").style.display = "none";
+        document.getElementById("observablehq-curadoria-8a850daf").style.display = "block";
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <h1>Além do Sanbox</h1>
+
+    <div id="observablehq-textointro-8a850daf"></div>
+    <div id="observablehq-navexemplos-8a850daf"></div>
+    <br />
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0 10px;">
+    <div id="observablehq-viewof-filtros-8a850daf"></div> <div style="padding-top: 2px; text-align: right;"><a href='javascript:thumbs();'>Imagens</a> | <a href='javascript:listagem();'>Lista</a></a></div>
+    </div>
+    <div id="observablehq-stats-8a850daf"></div>
+    <div id="observablehq-curadoria-8a850daf"></div>
+    <div id="observablehq-resultadolinsta-8a850daf"></div>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css"
+    />
+    <script type="module">
+      import {
+        Runtime,
+        Inspector,
+      } from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+      import define from "https://api.observablehq.com/@ranoya/alemdosandbox.js?v=3";
+      new Runtime().module(define, (name) => {
+        if (name === "textointro")
+          return new Inspector(
+            document.querySelector("#observablehq-textointro-8a850daf")
+          );
+        if (name === "navexemplos")
+          return new Inspector(
+            document.querySelector("#observablehq-navexemplos-8a850daf")
+          );
+        if (name === "viewof filtros")
+          return new Inspector(
+            document.querySelector("#observablehq-viewof-filtros-8a850daf")
+          );
+        if (name === "stats")
+          return new Inspector(
+            document.querySelector("#observablehq-stats-8a850daf")
+          );
+        if (name === "curadoria")
+          return new Inspector(
+            document.querySelector("#observablehq-curadoria-8a850daf")
+          );
+        if (name === "resultadolinsta")
+          return new Inspector(
+            document.querySelector("#observablehq-resultadolinsta-8a850daf")
+          );
+        return ["viewof matselect", "acionasearch", "custombuttons"].includes(
+          name
+        );
+      });
+    </script>
+  </body>
+</html>
